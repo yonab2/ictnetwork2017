@@ -1,8 +1,14 @@
  class apache {
 
-	package { 'apache':
-		ensure => present,
+	package { 'apache2-mpm-prefork':
+		ensure => installed,
 		}		
+	service { 'apache2':
+		ensure => running,
+		enable => true,
+
+		}
+
 
 
 	file { '/var/www':

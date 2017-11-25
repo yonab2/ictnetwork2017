@@ -1,4 +1,4 @@
-node 'sterch.localdomain' {
+node default {
 
 	include apache 
 }

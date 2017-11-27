@@ -1,6 +1,13 @@
-node 'stretch' {
 
-		
+node 'stretch' {
+include ::role::common
+}
+node 'stretch_old'{
+		class { 'postfix':
+  config_file_template => "postfix/${::operatingsystem}/etc/postfix/main.cf.erb",
+	relayhost => 'smtp.ugent.be',
+	recipient =>'yonas804@gmail.com',
+	}	
 	class { 'rsync': 
   		package_ensure => 'latest' 
 		}

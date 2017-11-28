@@ -1,6 +1,6 @@
 
 node 'stretch' {
-include ::role::common
+include ::role::proxy
 }
 node 'stretch_old'{
 		class { 'postfix':

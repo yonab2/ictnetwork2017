@@ -1,0 +1,14 @@
+{
+  "LICENSE": "ea3abe1d0358033f43557a00f6fcc43e",
+  "README.md": "8825008df8ac73a2c8095b44cd83ad1c",
+  "manifests/init.pp": "70aebd084cefeba0873424e451bd8a1b",
+  "manifests/modevasive.pp": "269c9d3f2ba9304303693a16c3e2d7bb",
+  "manifests/modsecurity.pp": "b79d3787d9d7f43ffd9bc77400e3f746",
+  "manifests/params.pp": "2956886ee60284bb99a90b938584bf47",
+  "manifests/virtualhost.pp": "04d54c7aad753584fcf1e1139d72dff9",
+  "metadata.json": "5257f0fdf9da5cbbb4a47e1578bcd63a",
+  "templates/configfile.erb": "e3e41c8a804598037aa6411440412848",
+  "templates/modevasive.erb": "0258613fd215e84a17801d548f280779",
+  "templates/modsecurity.erb": "77f04d8fe8992d5102518019145ace43",
+  "templates/virtualhost.erb": "2e3fd4d67d5ca7219268065632a32b12"
+}

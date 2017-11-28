@@ -1,0 +1,46 @@
+<VirtualHost <%= @listen %>>
+<% if @serveradmin -%>
+    ServerAdmin <%= @serveradmin %>
+<% end -%>
+<% if @documentroot -%>
+    DocumentRoot <%= @documentroot %>
+<% end -%>
+<% if @servername -%>
+    ServerName <%= @servername %>
+<% end -%>
+<% if @serveralias -%>
+    ServerAlias <%= @serveralias %>
+<% end -%>
+<% if @errorlog -%>
+    ErrorLog <%= @errorlog %>
+<% end -%>
+<% if @customlog -%>
+    CustomLog <%= @customlog %>
+<% end -%>
+<% if @redirect -%>
+    Redirect <%= @redirect %>
+<% end -%>
+<% if @sslengine -%>
+    SSLEngine <%= @sslengine %>
+<% end -%>
+<% if @sslcertificatefile -%>
+    SSLCertificateFile <%= @sslcertificatefile %>
+<% end -%>
+<% if @sslcertificatekeyfile -%>
+    SSLCertificateKeyFile <%= @sslcertificatekeyfile %>
+<% end -%>
+<% if @proxyrequests -%>
+    ProxyRequests <%= @proxyrequests %>
+<% end -%>
+<% if @proxypreservehost -%>
+    ProxyPreserveHost <%= @proxypreservehost %>
+<% end -%>
+<% if @proxypass -%>
+    ProxyPass <%= @proxypass %>
+<% end -%>
+<% if @proxypassreverse -%>
+    ProxyPassReverse <%= @proxypassreverse %>
+<% end -%>
+</VirtualHost>
+
+

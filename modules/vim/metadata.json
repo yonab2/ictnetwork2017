@@ -1,43 +1,40 @@
 {
-  "name": "dhoppe-vim",
-  "version": "1.4.1",
-  "author": "Dennis Hoppe",
-  "summary": "This module installs and configures the Vim package.",
-  "license": "Apache-2.0",
-  "source": "git://github.com/dhoppe/puppet-vim.git",
-  "project_page": "https://github.com/dhoppe/puppet-vim",
-  "issues_url": "https://github.com/dhoppe/puppet-vim/issues",
+  "name": "WhatsARanjit-vim",
+  "version": "0.3.0",
+  "author": "WhatsARanjit",
+  "summary": "Managed vim with Puppet",
+  "license": "Apache 2.0",
+  "source": "https://github.com/WhatsARanjit/puppet-vim",
+  "project_page": "https://github.com/WhatsARanjit/puppet-vim",
+  "issues_url": "https://github.com/WhatsARanjit/puppet-vim/issues",
   "dependencies": [
-    {"name":"puppet/extlib","version_requirement":">= 1.0.0 < 2.0.0"},
-    {"name":"puppetlabs/stdlib","version_requirement":">= 4.5.0 < 5.0.0"}
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.13.1 < 5.0.0"}
   ],
-  "data_provider": null,
+  "data_provider": "hiera",
   "operatingsystem_support": [
     {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "6",
-        "7",
-        "8"
-      ]
+      "operatingsystem": "RedHat"
     },
     {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-        "12.04",
-        "14.04",
-        "16.04"
-      ]
-    }
-  ],
-  "requirements": [
-    {
-      "name": "pe",
-      "version_requirement": ">= 3.2.0"
+      "operatingsystem": "CentOS"
     },
     {
-      "name": "puppet",
-      "version_requirement": ">= 3.2.0"
+      "operatingsystem": "OracleLinux"
+    },
+    {
+      "operatingsystem": "Scientific"
+    },
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "Ubuntu"
+    },
+    {
+      "operatingsystem": "Gentoo"
+    },
+    {
+      "operatingsystem": "FreeBSD"
     }
   ],
   "tags": [

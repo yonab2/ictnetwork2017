@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  class apache {
 
 	package { 'apache2-mpm-prefork':
@@ -28,3 +29,10 @@
 	     }
 
 
+=======
+class apache {
+  package{'apache':
+    ensure => present,
+         }
+}
+>>>>>>> 73701bc898ef8584b19bb4af05a2afd194942055

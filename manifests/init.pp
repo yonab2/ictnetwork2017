@@ -1,14 +1,15 @@
 
 node 'stretch' {
-include ::role::proxy
+	include ::role::proxy
 }
-node 'stretch_old'{
+	node 'stretch_old'{
 		class { 'postfix':
-  config_file_template => "postfix/${::operatingsystem}/etc/postfix/main.cf.erb",
-	relayhost => 'smtp.ugent.be',
-	recipient =>'yonas804@gmail.com',
-	}	
-	class { 'rsync': 
+  		config_file_template => "postfix/${::operatingsystem}/etc/postfix/main.cf.erb",
+		relayhost => 'smtp.ugent.be',
+		recipient =>'yonas804@gmail.com',
+		}	
+		
+		class { 'rsync': 
   		package_ensure => 'latest' 
 		}
 		#rsync::get { '/foo':
@@ -20,7 +21,7 @@ node 'stretch_old'{
   		#source  => "/repo/foo/",
 		#}
 	
-	accounts::user {'yonas':
+		accounts::user {'yonas':
         	uid => '4001',
         	gid => '4001',
         	group => 'staff',
@@ -29,28 +30,29 @@ node 'stretch_old'{
         	}
 
 	
-  	 class { 'ntp':
+  	 	class { 'ntp':
     		server_list => [ 'Ambou.edu.et','0.be.pool.ntp.org' ],
 		}
 
-	 class { 'resolv_conf':
+	 	class { 'resolv_conf':
     		nameservers => ['8.8.8.8'],
     		searchpath  => ['Google.com'],
 		}
 	
-	class { 'apt':
-	   	 update => {
-      		'frequency' => 'always',
-    		},
-    		purge  => {
-      		'sources.list'   => true,
-      		'sources.list.d' => true,
-      		'preferences'    => true,
-      		'preferences.d'  => true,
+		class { 'apt':
+	   		 update => {
+      			'frequency' => 'always',
+    			},
+    		
+			purge  => {
+      			'sources.list'   => true,
+      			'sources.list.d' => true,
+      			'preferences'    => true,
+      			'preferences.d'  => true,
     			},
   		}
 
-  	apt::source { 'puppetlabs':
+  		apt::source { 'puppetlabs':
     		location => 'http://apt.puppetlabs.com',
     		repos    => 'puppet5',
    		 key      => {
